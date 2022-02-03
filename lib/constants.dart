@@ -7,4 +7,4 @@ const kDefaultTextColor = Color(0xFF3D2E2E);
 const kHighlightBlackText = Color(0xFF3D2E2E);
 const double kDefaultFontSize = 14;
 const kBodyFont = "Montserrat";
-const kDefaultDuration = Duration(milliseconds: 600);
+const kDefaultDuration = Duration(milliseconds: 300);
