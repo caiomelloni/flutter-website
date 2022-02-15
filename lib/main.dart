@@ -1,9 +1,7 @@
-import 'package:deposito_nelinho/constants.dart';
 import 'package:deposito_nelinho/main_screen.dart';
 import 'package:deposito_nelinho/style/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
 import 'controllers/main_screen_controller.dart';
 
 void main() {
@@ -27,7 +25,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Depósito Nelinho",
-      home: MainScreen(),
+      home: const MainScreen(),
       theme: appTheme(),
     );
   }
