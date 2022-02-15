@@ -1,4 +1,3 @@
-import 'package:deposito_nelinho/constants.dart';
 import 'package:flutter/material.dart';
 
 class MainScreenController with ChangeNotifier {
