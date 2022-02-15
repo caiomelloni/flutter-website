@@ -39,14 +39,14 @@ class DrawerWidget extends StatelessWidget {
             DrawerItem(
               title: 'contato',
               press: () {
-                provider.scrollToSection(provider.getStartKey);
+                provider.scrollToSection(provider.getContactKey);
                 Navigator.pop(context);
               },
             ),
             DrawerItem(
               title: 'localização',
               press: () {
-                provider.scrollToSection(provider.getStartKey);
+                provider.scrollToSection(provider.getLocationKey);
                 Navigator.pop(context);
               },
             ),

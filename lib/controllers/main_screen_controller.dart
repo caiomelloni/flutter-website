@@ -35,19 +35,13 @@ class MainScreenController with ChangeNotifier {
   GlobalKey get getContactKey => _contactKey;
   GlobalKey get getLocationKey => _locationKey;
 
-  void scrollToSection(GlobalKey sectionKey) {
-    BuildContext? currentContext = sectionKey.currentContext;
+  void scrollToSection(GlobalKey sectionKey) async {
+    BuildContext currentContext = sectionKey.currentContext!;
 
-    if (currentContext == null) {
-      throw Exception(
-          'scrollToSection function was called before the element render');
-    }
-
-    RenderBox box = sectionKey.currentContext!.findRenderObject() as RenderBox;
-    Offset position = box.localToGlobal(Offset.zero);
-    double y = position.dy;
-
-    _scrollController.animateTo(y,
-        duration: kDefaultDuration, curve: Curves.easeIn);
+    await Scrollable.ensureVisible(
+      currentContext,
+      duration: const Duration(milliseconds: 600),
+      curve: Curves.decelerate,
+    );
   }
 }
