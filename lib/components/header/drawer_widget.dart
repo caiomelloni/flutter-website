@@ -11,6 +11,8 @@ class DrawerWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var provider = Provider.of<MainScreenController>(context, listen: false);
+
     return Drawer(
       child: Container(
         color: kSecondaryRed,
@@ -27,9 +29,27 @@ class DrawerWidget extends StatelessWidget {
                 ),
               ),
             ),
-            DrawerItem(title: 'início', press: () {}),
-            DrawerItem(title: 'contato', press: () {}),
-            DrawerItem(title: 'localização', press: () {}),
+            DrawerItem(
+              title: 'início',
+              press: () {
+                provider.scrollToSection(provider.getStartKey);
+                Navigator.pop(context);
+              },
+            ),
+            DrawerItem(
+              title: 'contato',
+              press: () {
+                provider.scrollToSection(provider.getStartKey);
+                Navigator.pop(context);
+              },
+            ),
+            DrawerItem(
+              title: 'localização',
+              press: () {
+                provider.scrollToSection(provider.getStartKey);
+                Navigator.pop(context);
+              },
+            ),
           ],
         ),
       ),
@@ -57,7 +77,8 @@ class DrawerItem extends StatelessWidget {
       child: Container(
         color: isActive ? Colors.white : null,
         child: ListTile(
-          contentPadding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+          contentPadding:
+              const EdgeInsets.symmetric(horizontal: kDefaultPadding),
           onTap: () {
             Provider.of<MainScreenController>(context, listen: false)
                 .setSelectedMenuItemTitle = title;

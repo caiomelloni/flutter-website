@@ -6,9 +6,8 @@ import 'package:provider/provider.dart';
 import 'components/site_body/site_body_widget.dart';
 
 class MainScreen extends StatelessWidget {
-  MainScreen({Key? key}) : super(key: key);
+  const MainScreen({Key? key}) : super(key: key);
 
-  final _scrollController = ScrollController();
   @override
   Widget build(BuildContext context) {
     var provider = Provider.of<MainScreenController>(context, listen: false);
@@ -18,10 +17,10 @@ class MainScreen extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            HeaderWidget(_scrollController),
+            HeaderWidget(provider.getScrollController),
             Expanded(
               child: SingleChildScrollView(
-                controller: _scrollController,
+                controller: provider.getScrollController,
                 child: const SiteBody(),
               ),
             )

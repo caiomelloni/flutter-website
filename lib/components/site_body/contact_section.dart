@@ -1,5 +1,6 @@
 import 'package:deposito_nelinho/components/outlined_button_widget.dart';
 import 'package:deposito_nelinho/components/section_title_widget.dart';
+import 'package:deposito_nelinho/components/temp/maintenance_dialog.dart';
 import 'package:deposito_nelinho/constants.dart';
 import 'package:deposito_nelinho/responsive.dart';
 import 'package:deposito_nelinho/style/fonts.dart';
@@ -24,13 +25,13 @@ class ContactSection extends StatelessWidget {
                 children: getSubSections(context),
               )
             : Container(
-              constraints: const BoxConstraints(maxHeight: 400),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                constraints: const BoxConstraints(maxHeight: 400),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: getSubSections(context),
                 ),
-            )
+              )
       ],
     );
   }
@@ -59,7 +60,9 @@ List<Widget> getSubSections(BuildContext context) {
                 text: 'Comprar Online',
                 fontSize: kDefaultFontSize * 1.5,
                 padding: kDefaultPadding,
-                onPressed: () {},
+                onPressed: () {
+                  showMaintenanceDialog(context);
+                },
               ),
             ),
           )
@@ -105,9 +108,11 @@ List<Widget> getSubSections(BuildContext context) {
                     '(11) 99465-6439',
                     style: googleFont(
                       fontFamily: kBodyFont,
-                      style: const TextStyle(
+                      style: TextStyle(
                           color: kDefaultTextColor,
-                          fontSize: kDefaultFontSize * 2.5),
+                          fontSize: Responsive.isMobile(context)
+                              ? kDefaultFontSize * 1.5
+                              : kDefaultFontSize * 2.5),
                     ),
                   ),
                 ],

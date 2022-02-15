@@ -13,25 +13,33 @@ class WebMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var provider = Provider.of<MainScreenController>(context, listen: false);
+
     return SizedBox(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           WebItem(
             title: 'início',
-            onPressed: () {},
+            onPressed: () {
+              provider.scrollToSection(provider.getStartKey);
+            },
             isScrolled: isScrolled,
           ),
           const SizedBox(width: 30),
           WebItem(
             title: 'contato',
-            onPressed: () {},
+            onPressed: () {
+              provider.scrollToSection(provider.getContactKey);
+            },
             isScrolled: isScrolled,
           ),
           const SizedBox(width: 30),
           WebItem(
             title: 'localização',
-            onPressed: () {},
+            onPressed: () {
+              provider.scrollToSection(provider.getLocationKey);
+            },
             isScrolled: isScrolled,
           ),
         ],

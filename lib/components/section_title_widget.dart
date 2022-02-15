@@ -50,22 +50,30 @@ class SectionTitleWidget extends StatelessWidget {
             ),
           ),
         ),
-        RichText(
-          text: TextSpan(
-              style: googleFont(
-                fontFamily: kBodyFont,
-                style: TextStyle(fontSize: getFontSize(context)),
+        Row(
+          children: [
+            Expanded(
+              child: RichText(
+                text: TextSpan(
+                    style: googleFont(
+                      fontFamily: kBodyFont,
+                      style: TextStyle(
+                        fontSize: getFontSize(context),
+                      ),
+                    ),
+                    children: [
+                      TextSpan(
+                        text: redText,
+                        style: const TextStyle(color: kSecondaryRed),
+                      ),
+                      TextSpan(
+                        text: blackText,
+                        style: const TextStyle(color: kHighlightBlackText),
+                      ),
+                    ]),
               ),
-              children: [
-                TextSpan(
-                  text: redText,
-                  style: const TextStyle(color: kSecondaryRed),
-                ),
-                TextSpan(
-                  text: blackText,
-                  style: const TextStyle(color: kHighlightBlackText),
-                ),
-              ]),
+            ),
+          ],
         )
       ],
     );

@@ -2,11 +2,9 @@ import 'package:deposito_nelinho/components/header/mobile_menu_widget.dart';
 import 'package:deposito_nelinho/components/header/web_menu.dart';
 import 'package:deposito_nelinho/components/office_hours_widget.dart';
 import 'package:deposito_nelinho/constants.dart';
-import 'package:deposito_nelinho/controllers/main_screen_controller.dart';
 import 'package:deposito_nelinho/responsive.dart';
 import 'package:deposito_nelinho/style/fonts.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 class HeaderWidget extends StatefulWidget {
   final ScrollController scrollController;
