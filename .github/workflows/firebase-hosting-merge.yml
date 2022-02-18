@@ -5,16 +5,15 @@ name: Deploy to Firebase Hosting on merge
 'on':
   push:
     branches:
-      - build
+      - main
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      # - run: npm ci && npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_DEPOSITO_NELINHO }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_DEPOSITONELINHO_1A19C }}'
           channelId: live
-          projectId: deposito-nelinho
+          projectId: depositonelinho-1a19c
