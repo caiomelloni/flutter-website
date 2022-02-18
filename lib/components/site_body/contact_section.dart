@@ -103,7 +103,7 @@ List<Widget> getSubSections(BuildContext context) {
                     ? MainAxisAlignment.spaceBetween
                     : MainAxisAlignment.spaceAround,
                 children: [
-                  SvgPicture.asset('whatsapp_icon.svg'),
+                  const Icon(Icons.message, size: 50),
                   Text(
                     '(11) 99465-6439',
                     style: googleFont(
