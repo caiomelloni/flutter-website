@@ -3,6 +3,7 @@ import 'package:deposito_nelinho/constants.dart';
 import 'package:deposito_nelinho/responsive.dart';
 import 'package:deposito_nelinho/style/fonts.dart';
 import 'package:flutter/material.dart';
+import 'dart:html' as html;
 
 class AdressSection extends StatelessWidget {
   const AdressSection({
@@ -17,9 +18,14 @@ class AdressSection extends StatelessWidget {
         const SectionTitleWidget(
             redText: 'Conheça nossa loja física', blackText: ''),
         const SizedBox(height: kDefaultPadding * 2),
-        ConstrainedBox(
-          constraints: const BoxConstraints(maxWidth: 800, maxHeight: 800),
-          child: Image.asset('assets/mapa.jpg'),
+        GestureDetector(
+          onTap: () {
+            html.window.open('https://goo.gl/maps/QZ7E9jNpwzTva8H58', "_blank");
+          },
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: 800, maxHeight: 800),
+            child: Image.asset('assets/mapa.jpg'),
+          ),
         ),
         const SizedBox(height: kDefaultPadding),
         Text(

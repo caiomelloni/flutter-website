@@ -104,7 +104,7 @@ List<Widget> getSubSections(BuildContext context) {
                 children: [
                   const Icon(Icons.message, size: 50),
                   Text(
-                    '(11) 99465-6439',
+                    '(11) 98529-9144',
                     style: googleFont(
                       fontFamily: kBodyFont,
                       style: TextStyle(
