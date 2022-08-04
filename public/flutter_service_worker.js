@@ -20,11 +20,12 @@ const RESOURCES = {
 "favicon-16x16.png": "6e32e475997d085bedd356c2f1a0fa13",
 "favicon-32x32.png": "9da3b65f9fa7c2d6a91cd340eef6986e",
 "favicon.ico": "8ba1cc120cabc145eb7144fe57b0907c",
-"index.html": "117890ff969da1f550911f7100553cee",
-"/": "117890ff969da1f550911f7100553cee",
+"index.html": "d845dbbceabf9f35de9c5805d98970b4",
+"/": "d845dbbceabf9f35de9c5805d98970b4",
 "main.dart.js": "e88894cc030accb6e6a9357620538f15",
 "manifest.json": "8ac1ae3c47206636f8d28d548fff3a44",
 "site.webmanifest": "053100cb84a50d2ae7f5492f7dd7f25e",
+"style.css": "a02d6228f491d78bf9b41d2e6307dcfe",
 "version.json": "08316cbb0edeb69733e651f522dc6f26"
 };
 
