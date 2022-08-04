@@ -1,6 +1,6 @@
 import 'package:deposito_nelinho/components/outlined_button_widget.dart';
 import 'package:deposito_nelinho/components/section_title_widget.dart';
-import 'package:deposito_nelinho/components/temp/maintenance_dialog.dart';
+import 'dart:html' as html;
 import 'package:deposito_nelinho/constants.dart';
 import 'package:deposito_nelinho/responsive.dart';
 import 'package:deposito_nelinho/style/fonts.dart';
@@ -38,7 +38,7 @@ class IntroductionSection extends StatelessWidget {
             fontSize: kDefaultFontSize * 1.5,
             text: 'Faça um pedido',
             onPressed: () {
-              showMaintenanceDialog(context);
+              html.window.open('https://wa.me/5511985299144', "_blank");
             },
           ),
         )
