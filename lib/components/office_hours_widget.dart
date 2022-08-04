@@ -29,10 +29,9 @@ class OfficeHoursWidget extends StatelessWidget {
           ),
           const SizedBox(width: kDefaultPadding * 0.5),
           Text(
-            "${_isOpen ? "Aberto" : "Fechado"} 7:00 às 18:00",
-            style: googleFont(fontFamily: kBodyFont, style: TextStyle(
-              color: textColor
-            )),
+            "${_isOpen ? "Aberto" : "Fechado"} 8:00 às 18:00",
+            style: googleFont(
+                fontFamily: kBodyFont, style: TextStyle(color: textColor)),
           ),
         ],
       ),
@@ -42,8 +41,16 @@ class OfficeHoursWidget extends StatelessWidget {
 
 bool isOpen() {
   int currentHour = DateTime.now().hour;
-  int openingHour = 7;
+  int openingHour = 8;
   int closingHour = 18;
+
+  int weekday = DateTime.now().weekday;
+
+  if (weekday == 7) {
+    closingHour = 8;
+  } else if (weekday == 6) {
+    closingHour = 15;
+  }
 
   return currentHour >= openingHour && currentHour < closingHour;
 }
